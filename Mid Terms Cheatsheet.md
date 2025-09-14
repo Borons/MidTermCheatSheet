@@ -20,6 +20,9 @@ sudo nmap -sU -sS 192.168.50.149
 
 Vuln Scan
 sudo nmap -sV -p 443 --script "vuln" 192.168.50.124
+
+Script Scan
+nmap -sC 192.168.50.124
 ```
 
 Directory Busting
