@@ -1,1 +1,3 @@
-## Mid Terms Cheatsheet
+# Mid Terms Cheatsheet
+
+## REMEMBER TO DO HOUSE CLEANING
